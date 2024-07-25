@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DnsSnap.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Host" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Google.com</Value>
+    </Setting>
+    <Setting Name="FirstColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#1F1F1F</Value>
+    </Setting>
+    <Setting Name="SecondColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#00C3BA</Value>
+    </Setting>
+    <Setting Name="ThirdColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#E8E8E8</Value>
+    </Setting>
+    <Setting Name="Admin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OnConnect</Value>
+    </Setting>
+    <Setting Name="Startup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

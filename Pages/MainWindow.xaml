@@ -1,0 +1,59 @@
+﻿<Window x:Class="DnsSnap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="DnsSnap" Height="300" Width="200"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        >
+
+    <Border 
+            CornerRadius="10"
+            MouseDown="MoveOnDrag"
+            BorderBrush="{DynamicResource SecondColor}"
+        Background="{StaticResource FirstColor}"
+            BorderThickness="0.5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="265*"/>
+            </Grid.RowDefinitions>
+
+            <Button Name="ExitBtn" 
+                    BorderThickness="0"
+                    Margin="175,5,5,0"
+                    Click="ExitBtn_Click"
+                    Style="{DynamicResource CloseBtn}" Height="25" VerticalAlignment="Top"/>
+            <Button x:Name="MinimizeBtn" 
+                     BorderThickness="0"
+                     Margin="148,0,31,0"
+                     Click="MinimizeBtn_Click"
+                     Style="{DynamicResource MinimizeBtn}" Height="25" VerticalAlignment="Center"/>
+            <Button  Name="SettingBtn" 
+                     BorderThickness="0"
+                     Margin="118,0,57,0"
+                     Click="SettingBtn_Click"
+                     Style="{DynamicResource SettingBtn}" Height="25" VerticalAlignment="Center"/>
+            <Button Name="Home"
+                    BorderThickness="0" 
+                    Margin="13,8,167,8"
+                    Click="Home_Click"
+                    Style="{DynamicResource HomeBtn}" Height="25" VerticalAlignment="Center"
+                    />
+
+
+            <Separator Background="White"
+                       BorderThickness="1"
+                       BorderBrush="{DynamicResource SecondColor}"
+                       Margin="0,27,0,257" Grid.RowSpan="2"/>
+            <Frame x:Name="MainView" x:FieldModifier="public" NavigationUIVisibility="Hidden" Grid.Row="1" Height="265" Width="200" Source="Connect.xaml" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+        </Grid>
+    </Border>
+</Window>

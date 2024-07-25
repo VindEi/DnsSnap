@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<item>
+	<version>1.0.0.0</version>
+	<url>https://github.com/VindEi/DnsSnap/releases/latest/download/DnsSnap.exe</url>
+	<changelog>https://github.com/VindEi/DnsSnap/releases/latest</changelog>
+	<mandatory>true</mandatory>
+</item>

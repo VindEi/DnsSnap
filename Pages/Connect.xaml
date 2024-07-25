@@ -1,0 +1,37 @@
+﻿<Page x:Class="DnsSnap.Pages.Connect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DnsSnap.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="265" d:DesignWidth="200"
+      Title="Connect" Background="Transparent">
+    <Border>
+
+        <Grid>
+            <ComboBox Margin="0,39,22,0"
+                x:Name="DnsBox"
+                x:FieldModifier="public"
+                Style="{StaticResource ModernCombobox}"
+                Foreground="{DynamicResource SecondColor}"
+                Background="{DynamicResource FirstColor}"
+                ItemsSource="{Binding DnsNames}" Height="19" VerticalAlignment="Top" HorizontalAlignment="Right" Width="155"
+                      />
+            <Button
+                x:Name="GetDnsBtn"
+                x:FieldModifier="public"
+                Click="GetDnsBtn_Click"
+                Content="Refresh"
+                Style="{StaticResource ButtonStyle}" HorizontalAlignment="Center" Width="200" Height="19" VerticalAlignment="Center" MouseDoubleClick="GetDnsBtn_MouseDoubleClick"/>
+            <Button Margin="25,185,25,0"
+                x:Name="ConnectBtn"
+                x:FieldModifier="public"
+                Content="Connect"
+                Click="ConnectBtn_Click"
+                Style="{StaticResource ButtonStyle}" Height="47" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Border>
+
+</Page>

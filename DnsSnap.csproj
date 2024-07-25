@@ -6,10 +6,70 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Theme\" />
+    <None Remove="Resources\Circle_Green.png" />
+    <None Remove="Resources\Circle_Red.png" />
+    <None Remove="Resources\Circle_Yellow.png" />
+    <None Remove="Resources\Close.png" />
+    <None Remove="Resources\Home.png" />
+    <None Remove="Resources\Logo.png" />
+    <None Remove="Resources\Minimize.png" />
+    <None Remove="Resources\Setting.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Circle_Green.png" />
+    <Resource Include="Resources\Circle_Red.png" />
+    <Resource Include="Resources\Circle_Yellow.png" />
+    <Resource Include="Resources\Close.png" />
+    <Resource Include="Resources\Home.png" />
+    <Resource Include="Resources\Icon.ico" />
+    <Resource Include="Resources\Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Minimize.png" />
+    <Resource Include="Resources\Setting.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autoupdater.NET.Official" Version="1.8.5" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DnsSnap.Dns\DnsSnap.Dns.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

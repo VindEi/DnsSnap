@@ -2,8 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DnsSnap"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Pages/MainWindow.xaml">
+
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/Button.xaml"/>
+                <ResourceDictionary Source="Style/combobox.xaml"/>
+                <ResourceDictionary Source="Style/ContextMenu.xaml"/>
+                <ResourceDictionary Source="Style/Colors.xaml"/>
+                <ResourceDictionary Source="Function/Notifico.xaml"/>
+                <ResourceDictionary Source="Style/Controls.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

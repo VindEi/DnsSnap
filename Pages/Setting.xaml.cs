@@ -1,8 +1,8 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using DnsSnap.Dns;
+﻿using DnsSnap.Dns;
 using System.ComponentModel;
 using System.Net;
+using System.Windows;
+using System.Windows.Controls;
 using MessageBox = System.Windows.MessageBox;
 
 namespace DnsSnap.Pages
@@ -32,7 +32,7 @@ namespace DnsSnap.Pages
             WebClient client = new();
             client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
             string messege = "Note that by clicking yes you will lose all your dns and download the default dns file(containing 5 dns)";
-            MessageBoxResult result =MessageBox.Show(messege, "Are You Sure You Want To Continue?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show(messege, "Are You Sure You Want To Continue?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
                 client.DownloadFileAsync(new Uri(url), DnsManager.filePath);

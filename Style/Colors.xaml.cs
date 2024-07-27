@@ -1,8 +1,7 @@
-﻿using System.Windows.Media;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using System.Diagnostics;
+using System.Windows.Media;
 
 namespace DnsSnap.Style
 {

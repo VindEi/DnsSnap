@@ -1,12 +1,5 @@
-﻿using DnsSnap.Pages;
-using DnsSnap.Properties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using DnsSnap.Properties;
 using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace DnsSnap.Function
 {
@@ -37,10 +30,10 @@ namespace DnsSnap.Function
             {
                 done = "Failed (No network connection or invalid server) ";
                 return done;
-                
+
 
             }
-        }                    
+        }
 
     }
 }

@@ -1,8 +1,6 @@
 ﻿using DnsSnap.Core;
-using DnsSnap.Dns;
 using DnsSnap.Function;
 using DnsSnap.Pages;
-using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 

@@ -1,9 +1,7 @@
 ﻿using DnsSnap.Dns;
 using Hardcodet.Wpf.TaskbarNotification;
 using System.Collections.ObjectModel;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace DnsSnap.Function
 {

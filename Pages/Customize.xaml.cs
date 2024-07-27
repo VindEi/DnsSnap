@@ -1,15 +1,6 @@
 ﻿using DnsSnap.Function;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Net.Sockets;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -25,8 +16,8 @@ namespace DnsSnap.Pages
         public Customize()
         {
             InitializeComponent();
-            FCtxt.Text = Properties.Settings.Default.FirstColor.Replace("#",string.Empty);
-            SCtxt.Text = Properties.Settings.Default.SecondColor.Replace("#",string.Empty);
+            FCtxt.Text = Properties.Settings.Default.FirstColor.Replace("#", string.Empty);
+            SCtxt.Text = Properties.Settings.Default.SecondColor.Replace("#", string.Empty);
             TCtxt.Text = Properties.Settings.Default.ThirdColor.Replace("#", string.Empty);
         }
 
@@ -82,7 +73,7 @@ namespace DnsSnap.Pages
         }
         private void RR()
         {
-            string url ="https://youtu.be/dQw4w9WgXcQ?si=jok1rrhkt2JvBz4F";
+            string url = "https://youtu.be/dQw4w9WgXcQ?si=jok1rrhkt2JvBz4F";
             var yt = new ProcessStartInfo("https://youtu.be/dQw4w9WgXcQ?si=jok1rrhkt2JvBz4F")
             {
                 UseShellExecute = true,
@@ -178,7 +169,7 @@ namespace DnsSnap.Pages
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             FCtxt.Text = "1F1F1F";
-            SCtxt.Text= "00C3BA";
+            SCtxt.Text = "00C3BA";
             TCtxt.Text = "E8E8E8";
         }
     }

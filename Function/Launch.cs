@@ -1,10 +1,8 @@
 ﻿using AutoUpdaterDotNET;
 using Microsoft.Win32;
 using System.Diagnostics;
-using System.Reflection;
 using System.Security.Principal;
 using System.Windows;
-using System.Windows.Documents.Serialization;
 
 namespace DnsSnap.Function
 {
@@ -44,7 +42,7 @@ namespace DnsSnap.Function
             {
                 var processInfo = new ProcessStartInfo(AppPath);
                 processInfo.UseShellExecute = true;
-                
+
                 processInfo.Verb = "runas";
                 try
                 {
@@ -57,14 +55,14 @@ namespace DnsSnap.Function
                     if (res == MessageBoxResult.Yes)
                     {
                         Properties.Settings.Default.Admin = "OnConnect";
-                       Properties.Settings.Default.Save();
+                        Properties.Settings.Default.Save();
                     }
 
                 }
                 Environment.Exit(0);
             }
         }
-            public static void CheckForUpdates()
+        public static void CheckForUpdates()
         {
             try
             {

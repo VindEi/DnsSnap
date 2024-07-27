@@ -1,15 +1,9 @@
 ﻿using DnsSnap.Dns;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DnsSnap.Function;
-using DnsSnap.Pages;
 using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Input;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 
 namespace DnsSnap.Pages
@@ -53,11 +47,11 @@ namespace DnsSnap.Pages
             string current;
             if (activedns.Length > 1)
             {
-                current = activedns[0] + ","+ activedns[1];
+                current = activedns[0] + "," + activedns[1];
             }
             else
             {
-                current =activedns[0];
+                current = activedns[0];
             }
             Clipboard.SetText(current);
         }
@@ -78,7 +72,7 @@ namespace DnsSnap.Pages
                 }
                 else if (DnsBox.SelectedItem == null)
                 {
-                    MessageBox.Show("Please Select A Dns","No Dns selected",MessageBoxButton.OK,MessageBoxImage.Exclamation);
+                    MessageBox.Show("Please Select A Dns", "No Dns selected", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
             }
             else if (ConnectBtn.Content.ToString() == "Disconnect")

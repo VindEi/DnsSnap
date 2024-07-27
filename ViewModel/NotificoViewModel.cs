@@ -23,12 +23,12 @@ namespace DnsSnap
             {
                 CommandAction = () =>
                 {
-                    if (!Launch.IsAdmin)
+                    if (Launch.IsAdmin)
                     {
                         DnsManager.SetDns(s);
                         Notificon.Notifyicon.ShowBalloonTip("DnsSnap", $"Connected to {s} :)", BalloonIcon.Info);
                     }
-                    else { Launch.Admin(); }
+                    else Launch.Admin();
                 }
             };
 

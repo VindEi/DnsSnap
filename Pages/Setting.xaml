@@ -7,12 +7,14 @@
       mc:Ignorable="d" 
       d:DesignHeight="265" d:DesignWidth="200"
       Title="Setting">
+    <Border Background="Transparent">
+        <Grid>
+            <Button x:Name="ManageBtn" Click="ManageBtn_Click" Content="Manage Dns" HorizontalAlignment="Center" Margin="0,13,0,0" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Height="42" />
+            <Button x:Name="OpenMinisBtn" Click="OpenMinisBtn_Click" Content="Tray Icon Setting" HorizontalAlignment="Center" Margin="0,73,0,0" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Height="43" />
+            <Button x:Name="Customize" Click="Customize_Click" Content="Customize" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Margin="0,135,0,0" Height="43" />
+            <Button x:Name="GetDnsBtn" Click="GetDnsBtn_Click" Content="Restore Dns" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Margin="0,198,0,0" Height="43" />
 
-    <Grid>
-        <Button x:Name="ManageBtn" Click="ManageBtn_Click" Content="Manage Dns" HorizontalAlignment="Center" Margin="0,13,0,0" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Height="42" />
-        <Button x:Name="OpenMinisBtn" Click="OpenMinisBtn_Click" Content="Tray Icon Setting" HorizontalAlignment="Center" Margin="0,73,0,0" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Height="43" />
-        <Button x:Name="Customize" Click="Customize_Click" Content="Customize" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Margin="0,135,0,0" Height="43" />
-        <Button x:Name="GetDnsBtn" Click="GetDnsBtn_Click" Content="Restore Dns" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource ButtonStyle}" Width="198" Margin="0,198,0,0" Height="43" />
-
-    </Grid>
+        </Grid>
+    </Border>
+    
 </Page>

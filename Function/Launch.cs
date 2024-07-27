@@ -1,15 +1,17 @@
 ﻿using AutoUpdaterDotNET;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.Reflection;
 using System.Security.Principal;
 using System.Windows;
+using System.Windows.Documents.Serialization;
 
 namespace DnsSnap.Function
 {
     class Launch
     {
         public static bool IsAdmin = false;
-
+        public static string AppPath = Environment.ProcessPath;
         public static void SetStartup()
         {
             RegistryKey rk = Registry.CurrentUser.OpenSubKey
@@ -36,22 +38,33 @@ namespace DnsSnap.Function
 
         private static void GetAdminAccess()
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.UseShellExecute = true;
-            startInfo.WorkingDirectory = Environment.CurrentDirectory;
-            startInfo.FileName = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            startInfo.Verb = "runas";
-            try
+            var identity = WindowsIdentity.GetCurrent();
+            var principal = new WindowsPrincipal(identity);
+            if (!principal.IsInRole(WindowsBuiltInRole.Administrator))
             {
-                Process.Start(startInfo);
-                Application.Current.Shutdown();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to request admin access: " + ex.Message);
+                var processInfo = new ProcessStartInfo(AppPath);
+                processInfo.UseShellExecute = true;
+                
+                processInfo.Verb = "runas";
+                try
+                {
+                    Process.Start(processInfo);
+                }
+                catch (Exception ex)
+                {
+                    MessageBoxResult res = MessageBox.Show("Would you like to change asking admin from on launch to on connect ?", "Failed to request admin (Fuctions require admin) ", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+
+                    if (res == MessageBoxResult.Yes)
+                    {
+                        Properties.Settings.Default.Admin = "OnConnect";
+                       Properties.Settings.Default.Save();
+                    }
+
+                }
+                Environment.Exit(0);
             }
         }
-        public static void CheckForUpdates()
+            public static void CheckForUpdates()
         {
             try
             {

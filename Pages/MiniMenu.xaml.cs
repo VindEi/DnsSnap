@@ -48,30 +48,46 @@ namespace DnsSnap.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            string selected = "";
 
-            foreach (var dns in AllDns.SelectedItems)
+            if (AllDns.SelectedItems.Count > 0)
             {
-                DnsManager.AddTrayDns(dns.ToString());
-                selected = selected + " " + dns.ToString();
+                string selected = "";
+
+                foreach (var dns in AllDns.SelectedItems)
+                {
+                    DnsManager.AddTrayDns(dns.ToString());
+                    selected = selected + " " + dns.ToString();
+
+                }
+                Retake();
+                MessageBox.Show("Hopefully Added " + selected, "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("No dns selected", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
-            Retake();
-            MessageBox.Show("Hopefully Added " + selected, "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
 
         private void RemoveBtn_Click(object sender, RoutedEventArgs e)
         {
-            string selected = "";
-            foreach (var dns in TrayiconDns.SelectedItems)
+            if (AllDns.SelectedItems.Count > 0)
             {
-                DnsManager.RemoveTrayDns(dns.ToString());
-                selected = selected + " " + dns.ToString();
+                string selected = "";
+                foreach (var dns in TrayiconDns.SelectedItems)
+                {
+                    DnsManager.RemoveTrayDns(dns.ToString());
+                    selected = selected + " " + dns.ToString();
+                }
+                Retake();
+                MessageBox.Show("Hopefully Deleted " + selected, "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            Retake();
-            MessageBox.Show("Hopefully Deleted " + selected, "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+            {
+                MessageBox.Show("No dns selected", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
+            }
         }
 
     }

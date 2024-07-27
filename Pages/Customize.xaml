@@ -7,8 +7,8 @@
       xmlns:prop="clr-namespace:DnsSnap.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="265" d:DesignWidth="200"
-      Title="Customize">
-    <Border>
+      Title="Customize" Background="Transparent">
+    <Border Background="Transparent">
         <Grid>
             <Label Content="First Color:  #"
                    Foreground="{DynamicResource SecondColor}"
@@ -46,7 +46,7 @@
             <Button Content="Save Changes"
                     Click="Save_Click"
                     Style="{DynamicResource ButtonStyle}"
-                    Margin="12,101,98,137"/>
+                    Margin="85,102,12,135"/>
             <Separator Foreground="{DynamicResource SecondColor}" Margin="0,126,0,115"/>
 
 
@@ -77,18 +77,10 @@
                     Margin="20,216,15,13"
                     Click="Soon_Click"
                     Style="{DynamicResource ButtonStyle}"/>
-            <Label Content="Only enter"
-                   FontSize="14"
-                Foreground="{DynamicResource SecondColor}"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="110,92,0,0" Height="28" Width="76"/>
-            <Label Content="Hex values"
-                FontSize="14"
-                Foreground="{DynamicResource SecondColor}"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="110,106,0,0" Height="30" Width="78"/>
+            <Button Content="Reset"
+                Click="Reset_Click"
+                Style="{DynamicResource ButtonStyle}"
+                Margin="7,102,126,135"/>
 
 
         </Grid>

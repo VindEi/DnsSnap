@@ -9,15 +9,14 @@
         Background="Transparent"
         AllowsTransparency="True"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterOwner"
+        WindowStartupLocation="CenterScreen"
         >
 
     <Border 
-            CornerRadius="10"
+            CornerRadius="7"
             MouseDown="MoveOnDrag"
             BorderBrush="{DynamicResource SecondColor}"
-        Background="{StaticResource FirstColor}"
-            BorderThickness="0.5">
+            BorderThickness="0.8">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="35*"/>
@@ -51,7 +50,7 @@
                        BorderThickness="1"
                        BorderBrush="{DynamicResource SecondColor}"
                        Margin="0,27,0,257" Grid.RowSpan="2"/>
-            <Frame x:Name="MainView" x:FieldModifier="public" NavigationUIVisibility="Hidden" Grid.Row="1" Height="265" Width="200" Source="Connect.xaml" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Frame BorderThickness="0" x:Name="MainView" x:FieldModifier="public" NavigationUIVisibility="Hidden" Grid.Row="1" Height="265" Width="200" Source="Connect.xaml" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
 
         </Grid>

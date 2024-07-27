@@ -63,7 +63,7 @@ namespace DnsSnap.Pages
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            if (DnsList.SelectedItems != null)
+            if (DnsList.SelectedItems.Count >0)
             {
                 string selected = "";
                 foreach (var dns in DnsList.SelectedItems)

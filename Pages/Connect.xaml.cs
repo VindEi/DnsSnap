@@ -67,17 +67,18 @@ namespace DnsSnap.Pages
             {
                 if (DnsBox.SelectedItem != null)
                 {
-                    if (!Launch.IsAdmin)
+                    if (Launch.IsAdmin)
                     {
                         DnsManager.SetDns(DnsBox.SelectedItem.ToString(), ConnectBtn);
                         ConnectBtn.Content = "Disconnect";
                         Sound.Connect.Play();
                     }
-                    else Launch.Admin();
+                    else { Launch.Admin(); }
 
                 }
                 else if (DnsBox.SelectedItem == null)
                 {
+                    MessageBox.Show("Please Select A Dns","No Dns selected",MessageBoxButton.OK,MessageBoxImage.Exclamation);
                 }
             }
             else if (ConnectBtn.Content.ToString() == "Disconnect")

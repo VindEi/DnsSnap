@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:DnsSnap.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="265" d:DesignWidth="200"
-      Title="MiniMenu">
-
-    <Grid>
+      Title="MiniMenu" Background="Transparent">
+    <Border Background="Transparent">
+            <Grid>
         <Button x:Name="AddBtn" Margin="10,217,108,16" Content="Add"  Style="{DynamicResource ButtonStyle}" Click="AddBtn_Click" />
         <ListBox x:Name="AllDns" Margin="11,29,110,80" ItemsSource="{Binding DnsNames}" Background="{DynamicResource FirstColor}" Foreground="{DynamicResource SecondColor}" BorderBrush="{DynamicResource SecondColor}" SelectionMode="Multiple"/>
         <Separator Margin="-2,123,-2,123" 
@@ -29,4 +29,6 @@
         <ListBox x:Name="TrayiconDns" Margin="109,27,12,79" ItemsSource="{Binding TrayDnsNames}" Background="{DynamicResource FirstColor}" Foreground="{DynamicResource SecondColor}" BorderBrush="{DynamicResource SecondColor}" SelectionMode="Multiple"/>
 
     </Grid>
+    </Border>
+
 </Page>

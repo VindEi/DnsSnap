@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnsSnap.Function;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace DnsSnap.Pages
             InitializeComponent();
             FCtxt.Text = Properties.Settings.Default.FirstColor.Replace("#",string.Empty);
             SCtxt.Text = Properties.Settings.Default.SecondColor.Replace("#",string.Empty);
-            TCtxt.Text = Properties.Settings.Default.ThirdColor.Replace("#", String.Empty);
+            TCtxt.Text = Properties.Settings.Default.ThirdColor.Replace("#", string.Empty);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -37,10 +38,12 @@ namespace DnsSnap.Pages
                 Properties.Settings.Default.SecondColor = "#" + SCtxt.Text.ToUpper();
                 Properties.Settings.Default.ThirdColor = "#" + TCtxt.Text.ToUpper();
                 Properties.Settings.Default.Save();
+                MessageBox.Show("Changes Saved", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+
             }
             else
             {
-                MessageBox.Show("Please fill dns information first", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please fill all boxes", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
         }
@@ -57,6 +60,7 @@ namespace DnsSnap.Pages
                 Properties.Settings.Default.Startup = true;
                 Startup.Content = "On";
             }
+            Launch.SetStartup();
         }
 
         private void Admin_Click(object sender, RoutedEventArgs e)
@@ -169,6 +173,13 @@ namespace DnsSnap.Pages
                     e.Handled = true;
                 }
             }
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            FCtxt.Text = "1F1F1F";
+            SCtxt.Text= "00C3BA";
+            TCtxt.Text = "E8E8E8";
         }
     }
 }

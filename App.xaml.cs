@@ -13,18 +13,20 @@ namespace DnsSnap
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            Notificon.Run();
-            Restrict();
-            Launch.CheckForUpdates();
-            if(DnsSnap.Properties.Settings.Default.Admin == "OnStart")
+            if (DnsSnap.Properties.Settings.Default.Admin == "OnStart")
             {
+                Thread.Sleep(5000);
                 Launch.Admin();
             }
-            if(IsAdministrator())
+            if (IsAdministrator())
             {
                 Launch.IsAdmin = true;
             }
 
+            Notificon.Run();
+            Launch.CheckForUpdates();
+            //Launch.SetStartup();
+            Restrict();
             base.OnStartup(e);
         }
         protected override void OnExit(ExitEventArgs e)

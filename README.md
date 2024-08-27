@@ -26,7 +26,7 @@ u know what's better ?
 
 also although i spent about 1 day debugging there still might be bugs (0.01% chance)
 
-here's some pictures of the default look (with u can change)
+here's some pictures of the default look (which u can change)
 
 ![image](https://github.com/user-attachments/assets/eb3ee36c-80a1-4e24-98d7-09b01fa44f1d)
 ![image](https://github.com/user-attachments/assets/89358065-62ed-489a-959b-6f49e7452cd8)

@@ -2,6 +2,6 @@
 <item>
     <version>99.0.0.0</version>
     <url>https://github.com/VindEi/SnapDNS/releases/latest/download/SnapDns_Setup.exe</url>
-    <changelog>https://github.com/VindEi/SnapDNS/blob/main/README.md</changelog>
+    <changelog>https://github.com/VindEi/SnapDNS/blob/master/README.md</changelog>
     <mandatory>true</mandatory>
 </item> 

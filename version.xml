@@ -2,7 +2,6 @@
 <item>
     <!-- Use a version number HIGHER than the last DnsSnap version -->
 <version>99.0.0.0</version>
-        <url>https://github.com/VindEi/SnapDNS/releases/latest/download/SnapDns_Setup.exe</url>
 
     <!-- Direct Link to your NEW SnapDNS Installer -->
     <!-- Make sure this link is the direct Github download link -->

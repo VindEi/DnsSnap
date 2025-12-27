@@ -8,7 +8,7 @@
     <url>https://github.com/VindEi/SnapDNS/releases/latest/download/SnapDns_Setup.exe</url>
     
     <!-- Link to the new repo so they see what changed -->
-    <changelog>https://github.com/VindEi/SnapDNS/releases/latest</changelog>
+    <changelog>https://raw.githubusercontent.com/VindEi/DnsSnap/refs/heads/master/migration.html</changelog>
     
     <!-- Force them to update -->
     <mandatory>true</mandatory>

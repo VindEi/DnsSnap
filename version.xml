@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<item>
-    <version>99.0.0.0</version>
-        <url>https://github.com/VindEi/SnapDNS/releases/latest/download/SnapDns_Setup.exe</url>
-    
-    <changelog>https://github.com/VindEi/SnapDns</changelog>
-    
-    <!-- Force them to update -->
-    <mandatory>true</mandatory>
-</item>
+

@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <item>
-	<version>1.0.0.0</version>
-	<url>https://github.com/VindEi/DnsSnap/releases/latest/download/DnsSnap.exe</url>
-	<changelog>https://github.com/VindEi/DnsSnap/releases/latest</changelog>
-	<mandatory>true</mandatory>
+    <!-- Use a version number HIGHER than the last DnsSnap version -->
+    <version>99.0.0.0</version>
+    
+    <!-- Direct Link to your NEW SnapDNS Installer -->
+    <!-- Make sure this link is the direct Github download link -->
+    <url>https://github.com/VindEi/SnapDNS/releases/latest/download/SnapDns_Setup.exe</url>
+    
+    <!-- Link to the new repo so they see what changed -->
+    <changelog>https://github.com/VindEi/SnapDNS/releases/latest</changelog>
+    
+    <!-- Force them to update -->
+    <mandatory>true</mandatory>
 </item>
